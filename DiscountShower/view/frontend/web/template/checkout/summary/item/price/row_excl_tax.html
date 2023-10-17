@@ -1,0 +1,23 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+
+<span class="cart-price">
+    <!-- Display strike-through price if discounted price is available -->
+    <!-- ko if: hasPositiveDiscount($parents[2]) -->
+    <s data-bind="text: getFormattedPrice(getRowDisplayPriceExclTax($parents[2]))"></s>
+    <!-- /ko -->
+    <!-- ko ifnot: hasPositiveDiscount($parents[2]) -->
+    <span class="price" data-bind="text: getFormattedPrice(getRowDisplayPriceExclTax($parents[2]))"></span>
+    <!-- /ko -->
+    <!-- Display discounted price if available -->
+    <!-- ko if: getDiscountPrice($parents[2]) > 0-->
+    <span class="discounted-price" data-bind="text: getFormattedPrice(getDiscountPrice($parents[2]))"></span>
+    <!-- /ko -->
+</span>
+
+

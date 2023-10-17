@@ -1,0 +1,22 @@
+{
+  "name": "rlt-square/module-discount-shower",
+  "version": "1.0.0",
+  "description": "Get a Product Discount show in Checkout Summary",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*",
+    "magento/module-catalog": "104.0.*",
+    "magento/module-checkout": "100.4.*"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "RltSquare\\DiscountShower\\": ""
+    }
+  }
+}
